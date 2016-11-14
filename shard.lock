@@ -1,5 +1,13 @@
 version: 1.0
 shards:
+  linalg:
+    github: l3kn/linalg
+    commit: c1c6a1e045c2511978123ee9d7d31256c9392f59
+
+  raytracer:
+    github: l3kn/raytracer
+    commit: c1d447d275882271bd6edb314e3ec097293b2c17
+
   stumpy_core:
     git: https://github.com/l3kn/stumpy_core.git
     commit: 1d2d3da9729d8994ad4c01e97a6203de90d1ea6f

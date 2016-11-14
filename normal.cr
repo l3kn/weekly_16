@@ -1,6 +1,8 @@
 require "stumpy_utils"
 require "stumpy_png"
 require "stumpy_gif"
+# require "linalg/vector"
+require "../../cralgebra/src/vector"
 
 include StumpyPNG
 
@@ -11,60 +13,18 @@ class Array
   end
 end
 
-struct Vector
-  getter x : Float64
-  getter y : Float64
-
-  def initialize(@x, @y)
-  end
-
-  def +(other : Vector)
-    Vector.new(
-      x + other.x,
-      y + other.y
-    )
-  end
-
-  def -(other : Vector)
-    Vector.new(
-      x - other.x,
-      y - other.y
-    )
-  end
-
-  def /(other)
-    Vector.new(
-      x / other,
-      y / other
-    )
-  end
-
-  def *(other)
-    Vector.new(
-      x * other,
-      y * other
-    )
-  end
-
-  def length
-    Math.sqrt(x*x + y*y)
-  end
-
-  def normalize
-    self / length
-  end
-end
+# alias LA::Vector2(Float64) = LA::LA::Vector2(Float64)2(Float64)
 
 class Line
-  getter point1 : Vector
-  getter point2 : Vector
-  getter normal : Vector
+  getter point1 : LA::Vector2(Float64)
+  getter point2 : LA::Vector2(Float64)
+  getter normal : LA::Vector2(Float64)
 
   def initialize(@point1, @point2, normal = nil)
     edge = @point1 - @point2
 
     if normal.nil?
-      @normal = Vector.new(
+      @normal = LA::Vector2(Float64).new(
         edge.y,
         -edge.x
       ).normalize
@@ -81,7 +41,7 @@ class Line
   end
 
   def displace(max_offset, keep_normal = true)
-    center = (point1 + point2) / 2
+    center = (point1 + point2) / 2.0
     offset = rand(-1.0..1.0) * max_offset
 
     new_center = center + @normal * offset
@@ -114,8 +74,8 @@ class MidpointDisplacement
     if lines.nil?
       @lines = [
         Line.new(
-          Vector.new(0.0, center),
-          Vector.new(width.to_f, center)
+          LA::Vector2(Float64).new(0.0, center),
+          LA::Vector2(Float64).new(width.to_f, center)
         )
       ]
     else
@@ -160,20 +120,20 @@ end
 if false 
   lines = [
     Line.new(
-      Vector.new(100.0, 100.0),
-      Vector.new(400.0, 100.0)
+      LA::Vector2(Float64).new(100.0, 100.0),
+      LA::Vector2(Float64).new(400.0, 100.0)
     ),
     Line.new(
-      Vector.new(100.0, 100.0),
-      Vector.new(100.0, 400.0)
+      LA::Vector2(Float64).new(100.0, 100.0),
+      LA::Vector2(Float64).new(100.0, 400.0)
     ),
     Line.new(
-      Vector.new(400.0, 100.0),
-      Vector.new(400.0, 400.0)
+      LA::Vector2(Float64).new(400.0, 100.0),
+      LA::Vector2(Float64).new(400.0, 400.0)
     ),
     Line.new(
-      Vector.new(100.0, 400.0),
-      Vector.new(400.0, 400.0)
+      LA::Vector2(Float64).new(100.0, 400.0),
+      LA::Vector2(Float64).new(400.0, 400.0)
     ),
   ]
 

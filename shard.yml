@@ -14,6 +14,10 @@ dependencies:
     github: l3kn/stumpy_png
   stumpy_gif:
     github: l3kn/stumpy_gif
+  linalg:
+    github: l3kn/linalg
+  raytracer:
+    github: l3kn/raytracer
 
 # development_dependencies:
 #   webmock:
