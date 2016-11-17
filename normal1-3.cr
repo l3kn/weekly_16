@@ -8,11 +8,8 @@ canvases = [] of Canvas
 canvases << mpd.draw
 10.times do |i|
   puts "Iteration #{i}"
-
-  # This will calculate normals for each line
-  # and use these to displace the midpoint
-  mpd.generate(1, false)
+  mpd.generate(1, true)
   canvases << mpd.draw
 end
 
-StumpyGIF.write(canvases, "perpendicular.gif", delay_time: 100)
+StumpyGIF.write(canvases, "output.gif", delay_time: 100)

@@ -2,7 +2,7 @@ version: 1.0
 shards:
   linalg:
     github: l3kn/linalg
-    commit: c1c6a1e045c2511978123ee9d7d31256c9392f59
+    commit: 8dee045fe45e414701abe5d9ae32da599ac2e44e
 
   raytracer:
     github: l3kn/raytracer
