@@ -1,11 +1,11 @@
-name: 16
+name: weekly_16
 version: 0.1.0
 
-# authors:
-#   - name <email@example.com>
+authors:
+  - l3kn <hello@l3kn.de>
 
-# description: |
-#   Short description of 16
+description: |
+  Implementations of the Midpoint Displacement Algorithm
 
 dependencies:
   stumpy_utils:
@@ -18,9 +18,7 @@ dependencies:
     github: l3kn/linalg
   raytracer:
     github: l3kn/raytracer
+  hacky_isometric:
+    github: l3kn/hacky_isometric
 
-# development_dependencies:
-#   webmock:
-#     github: manastech/webmock.cr
-
-# license: MIT
+license: MIT
