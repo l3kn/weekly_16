@@ -2,6 +2,21 @@
 
 [Weekly Programming Challenge #16](http://weblog.jamisbuck.org/2016/11/12/weekly-programming-challenge-16.html)
 
+## Usage
+
+```bash
+shards install
+crystal run --release hard6.cr
+```
+
+## Dependencies
+
+* [l3kn/stumpy_png](http://github.com/l3kn/stumpy_png) for creating .png files
+* [l3kn/stumpy_gif](http://github.com/l3kn/stumpy_gif) for creating .gif files
+* [l3kn/linalg](http://github.com/l3kn/linalg) for the vector structs
+* [l3kn/raytracer](http://github.com/l3kn/raytracer) to render the raytraced images
+* [l3kn/hacky_isometric](http://github.com/l3kn/hacky_isometric) to render the isometric images
+
 ## Normal mode (1, 2, 3)
 
 ![Animated gif of the midpoint displacement algorithm](images/output.gif)
