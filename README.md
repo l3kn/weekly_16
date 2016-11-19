@@ -2,6 +2,10 @@
 
 [Weekly Programming Challenge #16](http://weblog.jamisbuck.org/2016/11/12/weekly-programming-challenge-16.html)
 
+## TODO
+
+* Fix dependencies on local shard versions (raytracer / hacky_isometric / linalg)
+
 ## Usage
 
 ```bash
