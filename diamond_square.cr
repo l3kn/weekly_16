@@ -3,11 +3,13 @@ class DiamondSquare
   property roughness : Float64
   getter size : Int32
   getter max : Int32
+  getter height : Float64
 
   def initialize(exponent, @roughness)
     @size = 2**exponent + 1
-    @grid = Array.new(@size) { Array.new(@size, -1.0) }
+    @grid = Array.new(@size) { Array.new(@size, 0.0) }
     @max = @size - 1
+    @height = 10.0
 
     # seed_corners { rand(0.0..@max.to_f) }
     seed_corners { 0.0 }
@@ -23,23 +25,24 @@ class DiamondSquare
 
 
   def divide(size)
+    @height *= @roughness
+
     x = size / 2
     y = size / 2
     half = size / 2
-    scale = @roughness * size
 
     return if half < 1
 
     (half...@max).step(size).each do |y|
       (half...@max).step(size).each do |x|
-        s_scale = rand(-1.0..1.0) * scale
+        s_scale = rand(-1.0..1.0) * @height
         square(x, y, half, s_scale)
       end
     end
 
     (0..@max).step(half).each do |y|
       (((y + half) % size)..@max).step(size).each do |x|
-        d_scale = rand(-1.0..1.0) * scale
+        d_scale = rand(-1.0..1.0) * @height
         diamond(x, y, half, d_scale)
       end
     end

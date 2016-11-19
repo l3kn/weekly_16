@@ -28,4 +28,23 @@ Already implemented
 
 ## Hard mode (6)
 
+It seems like finding parameters that produce a nice image
+is harder than implementing the algorithm
+
 ![Raytraced terrain generated with the diamond-square algorithm](images/terrain.png)
+
+Phong shading looks much better, but sadly the raytracer is not efficient enough
+to render images where the exponent is higher...
+
+![Raytraced terrain generated with the diamond-square algorithm](images/terrain2.png)
+
+Maybe some hacky water will do the trick
+
+![Raytraced terrain generated with the diamond-square algorithm](images/terrain3.png)
+
+It turned out that my implementation of the roughness parameter was not optimal,
+here are some images generated with the fixed version (using `0.2`, `0.5` and `0.8` as roughness)
+
+![Raytraced terrain generated with the diamond-square algorithm](images/terrain4_r02.png)
+![Raytraced terrain generated with the diamond-square algorithm](images/terrain4_r05.png)
+![Raytraced terrain generated with the diamond-square algorithm](images/terrain4_r08.png)
