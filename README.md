@@ -45,6 +45,6 @@ Maybe some hacky water will do the trick
 It turned out that my implementation of the roughness parameter was not optimal,
 here are some images generated with the fixed version (using `0.2`, `0.5` and `0.8` as roughness)
 
-![Raytraced terrain generated with the diamond-square algorithm](images/terrain4_r02.png)
-![Raytraced terrain generated with the diamond-square algorithm](images/terrain4_r05.png)
-![Raytraced terrain generated with the diamond-square algorithm](images/terrain4_r08.png)
+![Raytraced terrain generated with the diamond-square algorithm](images/terrain4_02.png)
+![Raytraced terrain generated with the diamond-square algorithm](images/terrain4_05.png)
+![Raytraced terrain generated with the diamond-square algorithm](images/terrain4_08.png)
