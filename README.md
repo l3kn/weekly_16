@@ -48,3 +48,7 @@ here are some images generated with the fixed version (using `0.2`, `0.5` and `0
 ![Raytraced terrain generated with the diamond-square algorithm](images/terrain4_02.png)
 ![Raytraced terrain generated with the diamond-square algorithm](images/terrain4_05.png)
 ![Raytraced terrain generated with the diamond-square algorithm](images/terrain4_08.png)
+
+BONUS: A blocky isometric rendering of the terrain
+
+![Raytraced terrain generated with the diamond-square algorithm](images/terrain5.png)
